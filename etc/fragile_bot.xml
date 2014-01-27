@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <value name="noiselevel">15 cm</value>
+  <node name="some structural element">
+    <value name="destructive_collision_speed">0.1</value>
+  </node>
+</root>

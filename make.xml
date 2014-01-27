@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<targets>
+  <finroclibrary>
+    <sources exclude="pCrashCourse.cpp">
+      *.cpp
+    </sources>
+  </finroclibrary>
+  
+  <finroclibrary name="control">
+    <sources>
+      control/*.cpp
+    </sources>
+  </finroclibrary>
+  
+
+  <finrocprogram name="finroc_crash_course">
+    <sources>
+      pCrashCourse.cpp
+    </sources>
+  </finrocprogram>
+</targets>

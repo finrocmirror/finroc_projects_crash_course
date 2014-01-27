@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FinstructableGroup defaultname="CrashCourse" dependencies="finroc_projects_crash_course, finroc_projects_crash_course_control">
+  <element name="Simulation" group="finroc_projects_crash_course" type="Simulation">
+    <parameters/>
+  </element>
+  <element name="Control" group="finroc_projects_crash_course_control" type="Control">
+    <parameters/>
+  </element>
+  <edge src="Simulation/Sensor Output/Pose" dest="Control/Sensor Input/Pose"/>
+  <edge src="Simulation/Sensor Output/Ir Distance Front" dest="Control/Sensor Input/Ir Distance Front"/>
+  <edge src="Simulation/Sensor Output/Ir Distance Rear" dest="Control/Sensor Input/Ir Distance Rear"/>
+  <edge src="Control/Controller Output/Velocity" dest="Simulation/Controller Input/Velocity"/>
+  <edge src="Control/Controller Output/Angular Velocity" dest="Simulation/Controller Input/Angular Velocity"/>
+  <parameter link="Simulation/MainSimulation/Parameters/Destructive Collision Speed" config="/some structural element/destructive_collision_speed"/>
+  <parameter link="Simulation/AddNoise Front/Parameters/Standard Deviation" config="/noiselevel" cmdline="front-noise"/>
+  <parameter link="Simulation/AddNoise Rear/Parameters/Standard Deviation" config="/noiselevel"/>
+</FinstructableGroup>
