@@ -73,7 +73,7 @@ runtime_construction::tStandardCreateModuleAction<mNoiseFilter> cCREATE_ACTION_F
 // mNoiseFilter constructor
 //----------------------------------------------------------------------
 mNoiseFilter::mNoiseFilter(core::tFrameworkElement *parent, const std::string &name) :
-  tModule(parent, name, false, false),
+  tModule(parent, name, false),
   input(data_ports::tQueueSettings(true)), // this avoids that any values get lost if input signals e.g. come from a different thread
   last_values(),
   last_element_index(0)

@@ -71,7 +71,7 @@ runtime_construction::tStandardCreateModuleAction<mVisualization> cCREATE_ACTION
 // mVisualization constructor
 //----------------------------------------------------------------------
 mVisualization::mVisualization(core::tFrameworkElement *parent, const std::string &name) :
-  tModule(parent, name, false, false),
+  tModule(parent, name, false),
   last_collision_destructive(false)
 {}
 
