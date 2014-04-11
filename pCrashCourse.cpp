@@ -86,5 +86,5 @@ void CreateMainGroup(const std::vector<std::string> &remaining_arguments)
 
   new finroc::crash_course::gSimulation(main_thread);
 
-  main_thread->SetCycleTime(40);
+  main_thread->SetCycleTime(std::chrono::milliseconds(40));
 }

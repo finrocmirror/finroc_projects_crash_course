@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <targets>
-  <finroclibrary>
+  <library>
     <sources exclude="pCrashCourse.cpp">
       *.cpp
     </sources>
-  </finroclibrary>
+  </library>
   
-  <finroclibrary name="control">
+  <library name="control">
     <sources>
       control/*.cpp
     </sources>
-  </finroclibrary>
+  </library>
   
 
-  <finrocprogram name="finroc_crash_course">
+  <program name="finroc_crash_course">
     <sources>
       pCrashCourse.cpp
     </sources>
-  </finrocprogram>
+  </program>
 </targets>
