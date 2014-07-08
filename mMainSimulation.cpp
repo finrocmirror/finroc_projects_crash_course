@@ -118,12 +118,12 @@ void mMainSimulation::Sense()
   current_speed = new_speed;
 
   // Calculate new orientation
-  double new_direction = current_pose.Yaw() + angular_velocity.Get() * delta_t;
-  double avg_direction = (current_pose.Yaw() + new_direction) / 2;
+  tAngleRad new_direction = current_pose.Yaw() + tAngleRad(angular_velocity.Get() * delta_t);
+  tAngleRad avg_direction = (current_pose.Yaw() + tAngleRad(new_direction)) / 2;
 
   // Calculate new coordinates
   double s = avg_speed * delta_t;
-  current_pose.Set(current_pose.X() + s * cos(avg_direction), current_pose.Y() + s * sin(avg_direction), new_direction);
+  current_pose.Set(current_pose.X() + s * avg_direction.Cosine(), current_pose.Y() + s * avg_direction.Sine(), new_direction);
 
   // Did we collide with the wall?
   tPose2D back_left = current_pose;
