@@ -123,7 +123,7 @@ void mVisualization::Update()
     // Indicate Collision
     if (last_collision_pose.HasChanged())
     {
-      last_collision_destructive = (current_pose == rrlib::math::tPose2D(0, 0, 0));
+      last_collision_destructive = (current_pose == rrlib::math::tPose2D::Zero());
     }
     rrlib::time::tTimestamp last_collision_timestamp;
     rrlib::math::tPose2D last_collision = last_collision_pose.Get(last_collision_timestamp);

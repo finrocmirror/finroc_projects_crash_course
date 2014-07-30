@@ -146,7 +146,7 @@ void mMainSimulation::Sense()
     {
       robot_counter_internal++;
       robot_counter.Publish(robot_counter_internal);
-      current_pose.Set(0, 0, 0);
+      current_pose.Reset();
       current_speed = 0;
       FINROC_LOG_PRINTF(ERROR, "Robot crashed at a speed of %f m/s and was destroyed. Respawning. Destroyed Robots: %d.", avg_speed, robot_counter_internal);
     }
