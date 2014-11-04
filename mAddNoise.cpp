@@ -45,7 +45,6 @@
 //----------------------------------------------------------------------
 // Namespace usage
 //----------------------------------------------------------------------
-using namespace finroc::data_ports;
 
 //----------------------------------------------------------------------
 // Namespace declaration
@@ -73,8 +72,6 @@ runtime_construction::tStandardCreateModuleAction<mAddNoise> cCREATE_ACTION_FOR_
 //----------------------------------------------------------------------
 mAddNoise::mAddNoise(finroc::core::tFrameworkElement *parent, const std::string &name)
   : tModule(parent, name),
-    input(),
-    output(),
     standard_deviation(0.05),
     normal_distribution(0, 0.05),
     eng(1234)
