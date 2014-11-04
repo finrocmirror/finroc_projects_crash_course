@@ -41,7 +41,8 @@
 //----------------------------------------------------------------------
 // External includes (system with <>, local with "")
 //----------------------------------------------------------------------
-#include "rrlib/math/tPose2D.h"
+#include "rrlib/localization/tPose.h"
+#include "rrlib/si_units/si_units.h"
 
 //----------------------------------------------------------------------
 // Internal includes with ""
@@ -74,17 +75,17 @@ class gSimulation : public structure::tSenseControlGroup
 //----------------------------------------------------------------------
 public:
 
-  /*! Desired velocity (in m/s) */
-  tControllerInput<double> velocity;
+  /*! Desired velocity */
+  tControllerInput<rrlib::si_units::tVelocity<>> velocity;
 
   /*! Desired angular velocity */
-  tControllerInput<double> angular_velocity;
+  tControllerInput<rrlib::si_units::tAngularVelocity<>> angular_velocity;
 
   /*! Position of our robot in the world coordinate system */
-  tSensorOutput<rrlib::math::tPose2D> pose;
+  tSensorOutput<rrlib::localization::tPose2D<>> pose;
 
   /*! Simulated distance sensor values to the front and to the rear */
-  tSensorOutput<double> ir_distance_front, ir_distance_rear;
+  tSensorOutput<rrlib::si_units::tLength<>> ir_distance_front, ir_distance_rear;
 
 //----------------------------------------------------------------------
 // Public methods and typedefs

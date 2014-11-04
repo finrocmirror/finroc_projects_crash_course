@@ -85,7 +85,7 @@ mNoiseFilter::mNoiseFilter(core::tFrameworkElement *parent, const std::string &n
 void mNoiseFilter::Update()
 {
   // Add values from input queue to array
-  data_ports::tPortBuffers<double> incoming_values = input.DequeueAll();
+  data_ports::tPortBuffers<rrlib::si_units::tLength<>> incoming_values = input.DequeueAll();
   while (!incoming_values.Empty())
   {
     last_element_index++;
@@ -94,8 +94,8 @@ void mNoiseFilter::Update()
   }
 
   // Calculate mean
-  double result = 0;
-  for (double value : last_values)
+  rrlib::si_units::tLength<> result = 0;
+  for (rrlib::si_units::tLength<> value : last_values)
   {
     result += value;
   }

@@ -73,9 +73,9 @@ runtime_construction::tStandardCreateModuleAction<mAddNoise> cCREATE_ACTION_FOR_
 //----------------------------------------------------------------------
 mAddNoise::mAddNoise(finroc::core::tFrameworkElement *parent, const std::string &name)
   : tModule(parent, name),
-    input(tUnit::m),
-    output(tUnit::m),
-    standard_deviation(0.05, tUnit::m),
+    input(),
+    output(),
+    standard_deviation(0.05),
     normal_distribution(0, 0.05),
     eng(1234)
 {}
@@ -91,7 +91,7 @@ mAddNoise::~mAddNoise()
 //----------------------------------------------------------------------
 void mAddNoise::OnParameterChange()
 {
-  normal_distribution = std::normal_distribution<double>(0, standard_deviation.Get());
+  normal_distribution = std::normal_distribution<double>(0, standard_deviation.Get().Value());
 }
 
 //----------------------------------------------------------------------
@@ -99,7 +99,7 @@ void mAddNoise::OnParameterChange()
 //----------------------------------------------------------------------
 void mAddNoise::Update()
 {
-  output.Publish(input.Get() + normal_distribution(eng));
+  output.Publish(input.Get() + rrlib::si_units::tLength<>(normal_distribution(eng)));
 }
 
 //----------------------------------------------------------------------

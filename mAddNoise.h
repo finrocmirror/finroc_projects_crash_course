@@ -42,6 +42,7 @@
 // External includes (system with <>, local with "")
 //----------------------------------------------------------------------
 #include <random>
+#include "rrlib/si_units/si_units.h"
 
 //----------------------------------------------------------------------
 // Internal includes with ""
@@ -75,13 +76,13 @@ class mAddNoise : public structure::tModule
 public:
 
   /*! Input value */
-  tInput<double> input;
+  tInput<rrlib::si_units::tLength<>> input;
 
   /*! Output value (= input value with added noise) */
-  tOutput<double> output;
+  tOutput<rrlib::si_units::tLength<>> output;
 
   /*! Standard deviation for added noise */
-  tParameter<double> standard_deviation;
+  tParameter<rrlib::si_units::tLength<>> standard_deviation;
 
 //----------------------------------------------------------------------
 // Public methods and typedefs

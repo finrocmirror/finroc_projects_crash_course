@@ -82,7 +82,7 @@ void StartUp()
 //----------------------------------------------------------------------
 void CreateMainGroup(const std::vector<std::string> &remaining_arguments)
 {
-  finroc::structure::tTopLevelThreadContainer<> *main_thread = new finroc::structure::tTopLevelThreadContainer<>("Crash Course", __FILE__".xml", true, make_all_port_links_unique);
+  finroc::structure::tTopLevelThreadContainer<> *main_thread = new finroc::structure::tTopLevelThreadContainer<>("CrashCourse", __FILE__".xml", true, make_all_port_links_unique);
 
   new finroc::crash_course::gSimulation(main_thread);
 

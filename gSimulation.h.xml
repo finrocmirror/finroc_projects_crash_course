@@ -3,14 +3,6 @@
   <element name="AddNoise Rear" group="finroc_projects_crash_course" type="AddNoise">
     <parameters/>
   </element>
-  <element name="Visualization" group="finroc_projects_crash_course" type="Visualization">
-    <parameters/>
-  </element>
-  <edge src="MainSimulation/Sensor Output/Pose" dest="Visualization/Input/Pose"/>
-  <edge src="MainSimulation/Sensor Output/Ir Distance Front" dest="Visualization/Input/Ir Distance Front"/>
   <edge src="MainSimulation/Sensor Output/Ir Distance Rear" dest="AddNoise Rear/Input/Input"/>
-  <edge src="MainSimulation/Sensor Output/Ir Distance Rear" dest="Visualization/Input/Ir Distance Rear"/>
-  <edge src="MainSimulation/Sensor Output/Last Collision Pose" dest="Visualization/Input/Last Collision Pose"/>
-  <edge src="MainSimulation/Sensor Output/Robot Counter" dest="Visualization/Input/Robot Counter"/>
   <edge src="AddNoise Rear/Output/Output" dest="Sensor Output/Ir Distance Rear"/>
 </FinstructableGroup>

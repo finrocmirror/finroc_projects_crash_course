@@ -41,6 +41,7 @@
 //----------------------------------------------------------------------
 // External includes (system with <>, local with "")
 //----------------------------------------------------------------------
+#include "rrlib/si_units/si_units.h"
 
 //----------------------------------------------------------------------
 // Internal includes with ""
@@ -78,10 +79,10 @@ class mNoiseFilter : public structure::tModule
 public:
 
   /*! Input value */
-  tInput<double> input;
+  tInput<rrlib::si_units::tLength<>> input;
 
   /*! Output value (= input value with added noise) */
-  tOutput<double> output;
+  tOutput<rrlib::si_units::tLength<>> output;
 
 //----------------------------------------------------------------------
 // Public methods and typedefs
@@ -96,7 +97,7 @@ public:
 private:
 
   /*! Array with the last values */
-  std::array<double, cFILTER_VALUES> last_values;
+  std::array<rrlib::si_units::tLength<>, cFILTER_VALUES> last_values;
 
   /*! Index of last element written to array */
   size_t last_element_index;
