@@ -72,8 +72,8 @@ static runtime_construction::tStandardCreateModuleAction<mMainSimulation> cCREAT
 //----------------------------------------------------------------------
 // mMainSimulation constructor
 //----------------------------------------------------------------------
-mMainSimulation::mMainSimulation(finroc::core::tFrameworkElement *parent, const std::string &name) :
-  tSenseControlModule(parent, name),
+mMainSimulation::mMainSimulation(core::tFrameworkElement *parent, const std::string &name) :
+  tSenseControlModule(parent, name, false),
   max_acceleration(0.3),
   destructive_collision_speed(0.9),
   max_ir_sensor_distance(2),

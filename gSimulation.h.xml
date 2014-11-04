@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<FinstructableGroup dependencies="finroc_projects_crash_course">
+<Finstructable dependencies="finroc_projects_crash_course">
   <element name="AddNoise Rear" group="finroc_projects_crash_course" type="AddNoise">
     <parameters/>
   </element>
   <edge src="MainSimulation/Sensor Output/Ir Distance Rear" dest="AddNoise Rear/Input/Input"/>
   <edge src="AddNoise Rear/Output/Output" dest="Sensor Output/Ir Distance Rear"/>
-</FinstructableGroup>
+</Finstructable>

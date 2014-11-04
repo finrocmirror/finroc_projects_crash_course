@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<FinstructableGroup dependencies="finroc_projects_crash_course_control">
+<Finstructable dependencies="finroc_projects_crash_course_control">
   <element name="NoiseFilter Front" group="finroc_projects_crash_course_control" type="NoiseFilter">
     <parameters/>
   </element>
@@ -8,4 +8,4 @@
   </element>
   <edge src="Sensor Input/Ir Distance Front" dest="NoiseFilter Front/Input/Input"/>
   <edge src="Sensor Input/Ir Distance Rear" dest="NoiseFilter Rear/Input/Input"/>
-</FinstructableGroup>
+</Finstructable>

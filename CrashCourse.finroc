@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<FinstructableGroup defaultname="CrashCourse" dependencies="finroc_projects_crash_course, finroc_projects_crash_course_control">
+<Finstructable defaultname="CrashCourse" dependencies="finroc_projects_crash_course, finroc_projects_crash_course_control">
   <element name="Simulation" group="finroc_projects_crash_course" type="Simulation">
     <parameters/>
   </element>
@@ -14,4 +14,4 @@
   <parameter link="Simulation/MainSimulation/Parameters/Destructive Collision Speed" config="/some structural element/destructive_collision_speed"/>
   <parameter link="Simulation/AddNoise Front/Parameters/Standard Deviation" config="/noiselevel" cmdline="front-noise"/>
   <parameter link="Simulation/AddNoise Rear/Parameters/Standard Deviation" config="/noiselevel"/>
-</FinstructableGroup>
+</Finstructable>
